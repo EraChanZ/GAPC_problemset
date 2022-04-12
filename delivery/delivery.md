@@ -19,7 +19,7 @@ Given a street with houses find the optimal location for the drone to land.
 #### Input:
 
 The input consists of:
--One line with an integer n (2 <= n <= *insert number*), the number of houses.
+-One line with an integer n (2 <= n <= 10^6), the number of houses.
 -One line with n integers, p1, p2, ..., pn, (0 <= pi <= 10^9), the number of
  packages to be delivered to each of the houses.
 
