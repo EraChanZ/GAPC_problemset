@@ -1,0 +1,40 @@
+\problemname{\problemyamlname}
+
+\illustration{0.2}{image.jpeg}{}
+% Source: URL to image.
+
+% optionally define variables/limits for this problem
+\newcommand{\maxn}{10000}
+
+You were very lucky, and for this summer you got admitted to an internship in a huge software engineering company in switzerland called "Kässoft". 
+However your first assignment seemed a bit weird. Recentely a company recieved a task from a local factory making swiss cheese. They decided to enter a new "elite" market by dividing their produced cheese slices in two price categories, "perfect", and "normal".
+"Perfection" of the cheese piece is estimated by "roundness" of the holes on a slice. Your task is to write a program that will classify the slice.
+For simplicity it was assumed that cheese is a rectangle consisting of "0" and "1", where "0" represent holes, and "1" represent cheese. 
+A hole is considered perfect if given its center coordinate (a, b), and integer radius "r", all cells (x, y) with $(x - a)^2 + (y - b)^2 \leq r^2$ are all "0". It is guaranteed, that no hole interesect, or touch each other.
+Print classification of the given slice "perfect", or "normal", and if "perfect" also output all holes paramaters, its center coordinate, and a radius.
+
+Note:
+\begin{itemize}
+    \item Top-left cell of the grid has coordinate (0, 0).
+    \item If multiple hole configurations are possible, print the one with the smallest radius sum.
+\end{itemize}
+
+\begin{Input}
+    The input consists of:
+    \begin{itemize}
+        \item One line containing two integers $n, m$ ($0 < n\leq \maxn, 0 < m \leq \maxn$), width and height of the slice
+        \item $r$, minimum radius of a proper hole
+        \item $m$ lines containing $n$ integers "0" or "1" separated by space
+    \end{itemize}
+\end{Input}
+
+\begin{Output}
+    \begin{itemize}
+        \item "Perfect", or "normal"
+        \item $t$, where $t$ is amount of holes on a slice.
+        \item next $t$ lines containing three numbers separated by a space: $x, y, r$, where (x, y) is coordinate of the centher of the hole, and r is its radius.
+    \end{itemize}
+    \Sample{swisscheese/data/sample/1.in}{swisscheese/data/sample/1.ans}
+\end{Output}
+
+
