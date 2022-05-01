@@ -16,25 +16,25 @@ Print classification of the given slice "perfect", or "normal", and if "perfect"
 Note:
 \begin{itemize}
     \item Top-left cell of the grid has coordinate (0, 0).
-    \item If multiple hole configurations are possible, print the one with the smallest radius sum.
+    \item It is guaranteed, that holes don't have neighboring cells. So different cells (x1, y1) and (x2, y2) are considered neighboring if $|x1 - x2| + |y1 - y2| = 1$.
+    \item All holes are fully inside the slice, so for a circle with center $(x, y)$ and radius $r$ it is true that $x + r < n, x - r \geq 0, y + r < m, y - r \geq 0$
 \end{itemize}
 
 \begin{Input}
     The input consists of:
     \begin{itemize}
         \item One line containing two integers $n, m$ ($0 < n\leq \maxn, 0 < m \leq \maxn$), width and height of the slice
-        \item $r$, minimum radius of a proper hole
         \item $m$ lines containing $n$ integers "0" or "1" separated by space
     \end{itemize}
 \end{Input}
 
 \begin{Output}
     \begin{itemize}
-        \item "Perfect", or "normal"
+        \item "perfect", or "normal"
         \item $t$, where $t$ is amount of holes on a slice.
-        \item next $t$ lines containing three numbers separated by a space: $x, y, r$, where (x, y) is coordinate of the centher of the hole, and r is its radius.
+        \item next $t$ lines containing three numbers separated by a space: $0 \leq x < n, 0 \leq y < m, 1 \leq r$, where (x, y) is coordinate of the centher of the hole, and r is its radius.
     \end{itemize}
-    \Sample{swisscheese/data/sample/1.in}{swisscheese/data/sample/1.ans}
+    
 \end{Output}
 
 

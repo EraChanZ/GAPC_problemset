@@ -49,7 +49,9 @@ data:
       #- small: generator {seed} -n 3
       #- small: generator {seed} -n 7
       #- small: generator {seed} -n 13
-      #- medium: generator {seed} -n 85
+      medium: 
+        input: generate_testcase.py 100 100 1 3
+        solution: /submissions/accepted/solution.py
       #- medium: generator {seed} -n 103
       #- medium: generator {seed} -n 243
       #- large: generator {seed} -n 991
