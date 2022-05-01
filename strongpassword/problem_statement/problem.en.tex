@@ -1,0 +1,27 @@
+\problemname{\problemyamlname}
+
+%\illustration{0.3}{image.jpg}{CC-BY 2.0 By X on Y}
+% Source: URL to image.
+
+% optionally define variables/limits for this problem
+\newcommand{\minlen}{1}
+\newcommand{\maxlen}{20}
+
+Strong password has the following requirements:
+\begin{itemize}
+\item 8 to 16 character long.
+\item Contains at least one lower case letter.
+\item Contains at least one upper case letter.
+\item Contains at least one digit.
+\end{itemize}
+
+Some passwords are already strong, but some passwords can get strong by adding just one character.
+Given a password, is it possible to turn it into a strong one by appending at most one character?
+
+\begin{Input}
+    The input consists of one line containing a single string $pwd$ ($\minlen \leq len(pwd)\leq \maxlen$), the password.
+\end{Input}
+
+\begin{Output}
+    Print YES if it's possible to turn the password into a strong one by appending at most one character, otherwise print NO.
+\end{Output}

@@ -1,0 +1,26 @@
+\problemname{\problemyamlname}
+
+%\illustration{0.3}{image.jpg}{CC-BY 2.0 By X on Y}
+% Source: URL to image.
+
+% optionally define variables/limits for this problem
+\newcommand{\minn}{3}
+\newcommand{\maxn}{100}
+\newcommand{\minm}{3}
+\newcommand{\maxm}{100}
+
+You are visiting a movie theater, which looks like a grid with entrances, exits and available seats. You would like to enter the theater, get into some seat and leave, while covering as low distance as possible. What's the shortest distance that you can cover?
+
+Movie theater is a grid: entrance/exit is E/X on the edge, seat is S not on the edge.
+
+\begin{Input}
+    The input consists of multiple lines:
+    \begin{itemize}
+        \item First line contains two integers $N$ and $M$ ($\minn \leq N \leq \maxn$, $\minm \leq M \leq \maxm$), the dimensions of the grid.
+        \item $N$ following lines describe the movie theater. Every line contains $M$ characters, each being E, X, S or a dot.
+     \end{itemize}
+\end{Input}
+
+\begin{Output}
+    Output one integer number: the shortest distance you could cover from an entrance to an exit through a seat.
+\end{Output}

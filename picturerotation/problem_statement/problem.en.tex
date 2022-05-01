@@ -1,0 +1,28 @@
+\problemname{\problemyamlname}
+
+%\illustration{0.3}{image.jpg}{CC-BY 2.0 By X on Y}
+% Source: URL to image.
+
+% optionally define variables/limits for this problem
+\newcommand{\mina}{1}
+\newcommand{\maxa}{100}
+\newcommand{\minn}{0}
+\newcommand{\maxn}{1000}
+
+You have a picture, which looks like a rectangle with the sides W and H. Every day you rotate the picture for 1 degree. As you rotate the picture, you observe its bounding box - the smallest rectangle with the sides parallel to the axes that contains the rotated picture. 
+
+You've noticed that the area of bounding box is often bigger than the area of the picture. Given W, H and the day N, print the difference between the areas.
+
+\begin{Input}
+    The input consists of one line containing three space separated integers:
+    \begin{itemize}
+        \item Picture width $W$ ($\mina \leq W\leq \maxa$).
+        \item Picture height $H$ ($\mina \leq H\leq \maxa$).
+        \item Number of days $N$ ($\minn \leq N\leq \maxn$).
+    \end{itemize}
+\end{Input}
+
+\begin{Output}
+    Output the difference between the area of the bounding box and the area of the picture.
+    Your answer should have an absolute or relative error of at most $10^{-6}$.
+\end{Output}
