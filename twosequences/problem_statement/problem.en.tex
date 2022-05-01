@@ -1,0 +1,36 @@
+\problemname{\problemyamlname}
+
+%\illustration{0.3}{image.jpg}{CC-BY 2.0 By X on Y}
+% Source: URL to image.
+
+% optionally define variables/limits for this problem
+\newcommand{\minn}{1}
+\newcommand{\maxn}{100000}
+\newcommand{\minm}{1}
+\newcommand{\maxm}{100000}
+\newcommand{\mink}{1}
+\newcommand{\maxk}{100000}
+\newcommand{\mina}{0}
+\newcommand{\maxa}{1000000}
+
+You are given two increasing sequences of integers with sizes $N$ and $M$. Choose $K$ elements from the first sequence and $K-1$ elements from the second sequence in the following way:
+\begin{itemize}
+    \item The resulting elements should form an increasing sequence
+    \item The elements interleave, like A B A B A B A B A
+    \item The minimal difference between any two resulting elements is as large as possible
+\end{itemize}
+
+Print the largest possible minimal difference.
+
+\begin{Input}
+    The input consists of three lines:
+    \begin{itemize}
+        \item First line containing three space separated integers $N$, $M$ and $K$ ($\minn \leq N\leq \maxn$, $\minm \leq M\leq \maxm$, $\mink \leq K\leq \maxk$, $K \leq N$, $K-1 \leq M$).
+        \item Second line containing $N$ increasing elements of the first sequence. Each element is an integer between \mina and \maxa.
+        \item Third line containing $M$ increasing elements of the second sequence. Each element is an integer between \mina and \maxa.
+    \end{itemize}
+\end{Input}
+
+\begin{Output}
+    Output one integer number: the largest possible minimal difference between the elements of the resulting sequence.
+\end{Output}
