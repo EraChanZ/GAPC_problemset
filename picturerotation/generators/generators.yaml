@@ -1,39 +1,97 @@
-#solution: /submissions/accepted/submission.py
+solution: /submissions/accepted/author_solution.cpp
 #visualizer: /visualizers/asy.sh {name}
 # By default, generated files are not ignored.
-#gitignore_generated: false
+gitignore_generated: true
 
 data:
   sample:
     type: directory
     # Uncomment to disable generating ans files for sample cases.
-    #solution:
+    solution: /submissions/accepted/author_solution.cpp
     data:
       # Some small examples showing to help understanding of the problem
-      #'1':
-      #'2':
+      'sample_1': stdout.py 1 1 45
+      'sample_2': stdout.py 1 2 540
+      'sample_3': stdout.py 5 4 321
 
   secret:
     type: directory
     data:
+      - trivial: stdout.py 1 1 0
+      - trivial: stdout.py 1 1 90
+      - trivial: stdout.py 1 1 180
+      - trivial: stdout.py 1 1 270
+      - trivial: stdout.py 1 1 360
+      - trivial: stdout.py 2 3 0
+      - trivial: stdout.py 2 3 90
+      - trivial: stdout.py 2 3 180
+      - trivial: stdout.py 2 3 270
+      - trivial: stdout.py 2 3 360
+      - trivial: stdout.py 2 3 450
+      - trivial: stdout.py 2 3 540
+      - trivial: stdout.py 2 3 630
+      - trivial: stdout.py 2 3 720
+      - trivial: stdout.py 2 3 810
+      - trivial: stdout.py 2 3 900
+      - trivial: stdout.py 2 3 990
+      - manual: stdout.py 7 9 100
+      - manual: stdout.py 7 9 200
+      - manual: stdout.py 7 9 300
+      - manual: stdout.py 7 9 400
+      - manual: stdout.py 7 9 500
+      - manual: stdout.py 7 9 600
+      - manual: stdout.py 7 9 700
+      - manual: stdout.py 7 9 800
+      - manual: stdout.py 7 9 900
+      - manual: stdout.py 7 9 1000
+      - tiny: generator {seed:01} -w 1..5 -h 1..5 -n 1..90
+      - tiny: generator {seed:02} -w 1..5 -h 1..5 -n 1..90
+      - tiny: generator {seed:03} -w 1..5 -h 1..5 -n 1..90
+      - tiny: generator {seed:04} -w 1..5 -h 1..5 -n 1..90
+      - tiny: generator {seed:05} -w 1..5 -h 1..5 -n 1..90
+      - small: generator {seed:01} -w 1..10 -h 1..10 -n 1..1000
+      - small: generator {seed:02} -w 1..10 -h 1..10 -n 1..1000
+      - small: generator {seed:03} -w 1..10 -h 1..10 -n 1..1000
+      - small: generator {seed:04} -w 1..10 -h 1..10 -n 1..1000
+      - small: generator {seed:05} -w 1..10 -h 1..10 -n 1..1000
+      - medium: generator {seed:01} -w 50..100 -h 50..100 -n 1..1000
+      - medium: generator {seed:02} -w 50..100 -h 50..100 -n 1..1000
+      - medium: generator {seed:03} -w 50..100 -h 50..100 -n 1..1000
+      - medium: generator {seed:04} -w 50..100 -h 50..100 -n 1..1000
+      - medium: generator {seed:05} -w 50..100 -h 50..100 -n 1..1000
+      - large: generator {seed:01} -w 90..100 -h 90..100 -n 100..1000
+      - large: generator {seed:02} -w 90..100 -h 90..100 -n 100..1000
+      - large: generator {seed:03} -w 90..100 -h 90..100 -n 100..1000
+      - large: generator {seed:04} -w 90..100 -h 90..100 -n 100..1000
+      - large: generator {seed:05} -w 90..100 -h 90..100 -n 100..1000
+      - low: generator {seed:01} -w 1..10 -h 90..100 -n 1..1000
+      - low: generator {seed:02} -w 1..10 -h 90..100 -n 1..1000
+      - low: generator {seed:03} -w 1..10 -h 90..100 -n 1..1000
+      - low: generator {seed:04} -w 1..10 -h 90..100 -n 1..1000
+      - low: generator {seed:05} -w 1..10 -h 90..100 -n 1..1000
+      - high: generator {seed:01} -w 90..100 -h 1..10 -n 1..1000
+      - high: generator {seed:02} -w 90..100 -h 1..10 -n 1..1000
+      - high: generator {seed:03} -w 90..100 -h 1..10 -n 1..1000
+      - high: generator {seed:04} -w 90..100 -h 1..10 -n 1..1000
+      - high: generator {seed:05} -w 90..100 -h 1..10 -n 1..1000
       # You can re-use the input validator by symlinking it as `generator` in
       # this directory. Below is some inspiration for test cases.
       #
       # Use `-X` to set the value of variable `X`, as provided to the `read_*` functions.
       # Use `min` and `max` to set variables to their minimum and maximum
       # allowed values.
-      #- min: generator {seed} -n min -k min -ai min
-      #- max: generator {seed} -n max -k max -ai max
+      #- min: generator {seed} -w 1..100 -h 1..100 -n min -k min -ai min
+      #- max: generator {seed} -w 1..100 -h 1..100 -n max -k max -ai max
       # Leave a variable out to pick a uniform random value.
-      #- random_a: generator {seed} -n max
+      #- random_a: generator {seed} -w 1..100 -h 1..100 -n max
       # Provide an explicit list of values:
       #- binary: generator {seed} -ai 0,1
       # Provide probabilities for each value:
       #- mostly_0: generator {seed} -ai 0:0.99,1:0.01
       # Uniform random values in range:
-      #- small_a: generator {seed} -n 10 -ai 1..100
+      #- small_a: generator {seed} -w 1..100 -h 1..100 -n 10 -ai 1..100
       # Use a geometric distribution (see validation.h for more):
-      #- geometric: generator {seed} -n 100 -k 123 -ai geometric(0.1)
+      #- geometric: generator {seed} -w 1..100 -h 1..100 -n 100 -k 123 -ai geometric(0.1)
 
       # Manual cases can be added like this:
       #- handcrafted: manual/handcrafted.in
@@ -44,14 +102,14 @@ data:
 
       # Typically, small test cases are more likely to find bugs/edge cases.
       # When the limit on n is 1000, do something like:
-      #- small: generator {seed} -n 1
-      #- small: generator {seed} -n 2
-      #- small: generator {seed} -n 3
-      #- small: generator {seed} -n 7
-      #- small: generator {seed} -n 13
-      #- medium: generator {seed} -n 85
-      #- medium: generator {seed} -n 103
-      #- medium: generator {seed} -n 243
-      #- large: generator {seed} -n 991
-      #- large: generator {seed} -n 999
-      #- large: generator {seed} -n 1000
+      #- small: generator {seed} -w 1..100 -h 1..100 -n 1
+      #- small: generator {seed} -w 1..100 -h 1..100 -n 2
+      #- small: generator {seed} -w 1..100 -h 1..100 -n 3
+      #- small: generator {seed} -w 1..100 -h 1..100 -n 7
+      #- small: generator {seed} -w 1..100 -h 1..100 -n 13
+      #- medium: generator {seed} -w 1..100 -h 1..100 -n 85
+      #- medium: generator {seed} -w 1..100 -h 1..100 -n 103
+      #- medium: generator {seed} -w 1..100 -h 1..100 -n 243
+      #- large: generator {seed} -w 1..100 -h 1..100 -n 991
+      #- large: generator {seed} -w 1..100 -h 1..100 -n 999
+      #- large: generator {seed} -w 1..100 -h 1..100 -n 1000

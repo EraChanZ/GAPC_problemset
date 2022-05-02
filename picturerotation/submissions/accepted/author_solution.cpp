@@ -13,8 +13,8 @@ int main() {
     cin >> w >> h >> n;
 
     double alpha = n * PI / 180;
-    double x = w * cos(alpha) + h * sin(alpha);
-    double y = w * sin(alpha) + h * cos(alpha);
+    double x = w * abs(cos(alpha)) + h * abs(sin(alpha));
+    double y = w * abs(sin(alpha)) + h * abs(cos(alpha));
 
     cout << x * y - w * h + 1e-13 << endl;
 
