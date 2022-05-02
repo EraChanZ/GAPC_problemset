@@ -1,21 +1,72 @@
-#solution: /submissions/accepted/submission.py
+solution: /submissions/accepted/author_solution.cpp
 #visualizer: /visualizers/asy.sh {name}
 # By default, generated files are not ignored.
-#gitignore_generated: false
+gitignore_generated: true
 
 data:
   sample:
     type: directory
     # Uncomment to disable generating ans files for sample cases.
-    #solution:
+    solution: /submissions/accepted/author_solution.cpp
     data:
       # Some small examples showing to help understanding of the problem
-      #'1':
-      #'2':
+      'sample_1': stdout.py 1357
+      'sample_2': stdout.py 135792468
+      'sample_3': stdout.py 1
+      'sample_4': stdout.py 2
 
   secret:
     type: directory
     data:
+      #- trivial: stdout.py 1
+      #- trivial: stdout.py 2
+      - trivial: stdout.py 3
+      - trivial: stdout.py 4
+      - trivial: stdout.py 5
+      - trivial: stdout.py 10
+      - trivial: stdout.py 11
+      - trivial: stdout.py 12
+      - trivial: stdout.py 13
+      - trivial: stdout.py 14
+      - trivial: stdout.py 15
+      - manual: stdout.py 23
+      - manual: stdout.py 27
+      - manual: stdout.py 39
+      - manual: stdout.py 138
+      - manual: stdout.py 153
+      - manual: stdout.py 307
+      - manual: stdout.py 1337
+      - manual: stdout.py 135791357
+      - manual: stdout.py 199739973
+      - manual: stdout.py 999999937
+      - manual: stdout.py 999999998
+      - manual: stdout.py 999999999
+      - manual: stdout.py 1000000000
+      - small: generator {seed:01} -n 10..1000
+      - small: generator {seed:02} -n 10..1000
+      - small: generator {seed:03} -n 10..1000
+      - small: generator {seed:04} -n 10..1000
+      - small: generator {seed:05} -n 10..1000
+      - medium: generator {seed:01} -n 1000..1000000
+      - medium: generator {seed:02} -n 1000..1000000
+      - medium: generator {seed:03} -n 1000..1000000
+      - medium: generator {seed:04} -n 1000..1000000
+      - medium: generator {seed:05} -n 1000..1000000
+      - large: generator {seed:01} -n 1000000..100000000
+      - large: generator {seed:02} -n 1000000..100000000
+      - large: generator {seed:03} -n 1000000..100000000
+      - large: generator {seed:04} -n 1000000..100000000
+      - large: generator {seed:05} -n 1000000..100000000
+      - huge: generator {seed:01} -n 100000000..1000000000
+      - huge: generator {seed:02} -n 100000000..1000000000
+      - huge: generator {seed:03} -n 100000000..1000000000
+      - huge: generator {seed:04} -n 100000000..1000000000
+      - huge: generator {seed:05} -n 100000000..1000000000
+      - huge: generator {seed:06} -n 100000000..1000000000
+      - huge: generator {seed:07} -n 100000000..1000000000
+      - huge: generator {seed:08} -n 100000000..1000000000
+      - huge: generator {seed:09} -n 100000000..1000000000
+      - huge: generator {seed:10} -n 100000000..1000000000
       # You can re-use the input validator by symlinking it as `generator` in
       # this directory. Below is some inspiration for test cases.
       #
