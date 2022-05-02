@@ -1,21 +1,132 @@
-#solution: /submissions/accepted/submission.py
+solution: /submissions/accepted/author_solution.cpp
 #visualizer: /visualizers/asy.sh {name}
 # By default, generated files are not ignored.
-#gitignore_generated: false
+gitignore_generated: true
 
 data:
   sample:
     type: directory
     # Uncomment to disable generating ans files for sample cases.
-    #solution:
+    solution: /submissions/accepted/author_solution.cpp
     data:
       # Some small examples showing to help understanding of the problem
-      #'1':
-      #'2':
+      'sample_1': stdout.py Password1
+      'sample_2': stdout.py longpassword
+      'sample_3': stdout.py pr3ttystr0ng
+      'sample_4': stdout.py 7MySuperStrongPass7
 
   secret:
     type: directory
     data:
+      - manual: stdout.py Pass1
+      - manual: stdout.py A
+      - manual: stdout.py z
+      - manual: stdout.py 1
+      - manual: stdout.py a1
+      - manual: stdout.py password
+      - manual: stdout.py password1
+      - manual: stdout.py 1short
+      - manual: stdout.py 2normal
+      - manual: stdout.py 3JustFine
+      - manual: stdout.py lowerfine3
+      - short: Gen.java {seed} U 1
+      - short: Gen.java {seed} L 1
+      - short: Gen.java {seed} D 1
+      - random: Gen.java {seed:1} ULD 2
+      - random: Gen.java {seed:2} ULD 2
+      - random: Gen.java {seed:1} ULD 3
+      - random: Gen.java {seed:2} ULD 3
+      - random: Gen.java {seed:1} ULD 4
+      - random: Gen.java {seed:2} ULD 4
+      - random: Gen.java {seed:1} ULD 5
+      - random: Gen.java {seed:2} ULD 5
+      - random: Gen.java {seed:1} ULD 6
+      - random: Gen.java {seed:2} ULD 6
+      - random: Gen.java {seed:1} ULD 7
+      - random: Gen.java {seed:2} ULD 7
+      - random: Gen.java {seed:1} ULD 8
+      - random: Gen.java {seed:2} ULD 8
+      - random: Gen.java {seed:1} ULD 9
+      - random: Gen.java {seed:2} ULD 9
+      - random: Gen.java {seed:1} ULD 10
+      - random: Gen.java {seed:2} ULD 10
+      - random: Gen.java {seed:1} ULD 11
+      - random: Gen.java {seed:2} ULD 11
+      - random: Gen.java {seed:1} ULD 12
+      - random: Gen.java {seed:2} ULD 12
+      - random: Gen.java {seed:1} ULD 13
+      - random: Gen.java {seed:2} ULD 13
+      - random: Gen.java {seed:1} ULD 14
+      - random: Gen.java {seed:2} ULD 14
+      - random: Gen.java {seed:1} ULD 15
+      - random: Gen.java {seed:2} ULD 15
+      - random: Gen.java {seed:1} ULD 16
+      - random: Gen.java {seed:2} ULD 16
+      - random: Gen.java {seed:1} ULD 17
+      - random: Gen.java {seed:2} ULD 17
+      - random: Gen.java {seed:1} ULD 18
+      - random: Gen.java {seed:2} ULD 18
+      - random: Gen.java {seed:1} ULD 19
+      - random: Gen.java {seed:2} ULD 19
+      - random: Gen.java {seed:1} ULD 20
+      - random: Gen.java {seed:2} ULD 20
+      - edgy: Gen.java {seed} ULD 6
+      - edgy: Gen.java {seed} UL 6
+      - edgy: Gen.java {seed} UD 6
+      - edgy: Gen.java {seed} LD 6
+      - edgy: Gen.java {seed} U 6
+      - edgy: Gen.java {seed} L 6
+      - edgy: Gen.java {seed} D 6
+      - edgy: Gen.java {seed} ULD 7
+      - edgy: Gen.java {seed} UL 7
+      - edgy: Gen.java {seed} UD 7
+      - edgy: Gen.java {seed} LD 7
+      - edgy: Gen.java {seed} U 7
+      - edgy: Gen.java {seed} L 7
+      - edgy: Gen.java {seed} D 7
+      - edgy: Gen.java {seed} ULD 8
+      - edgy: Gen.java {seed} UL 8
+      - edgy: Gen.java {seed} UD 8
+      - edgy: Gen.java {seed} LD 8
+      - edgy: Gen.java {seed} U 8
+      - edgy: Gen.java {seed} L 8
+      - edgy: Gen.java {seed} D 8
+      - edgy: Gen.java {seed} ULD 9
+      - edgy: Gen.java {seed} UL 9
+      - edgy: Gen.java {seed} UD 9
+      - edgy: Gen.java {seed} LD 9
+      - edgy: Gen.java {seed} U 9
+      - edgy: Gen.java {seed} L 9
+      - edgy: Gen.java {seed} D 9
+      - edgy: Gen.java {seed} ULD 14
+      - edgy: Gen.java {seed} UL 14
+      - edgy: Gen.java {seed} UD 14
+      - edgy: Gen.java {seed} LD 14
+      - edgy: Gen.java {seed} U 14
+      - edgy: Gen.java {seed} L 14
+      - edgy: Gen.java {seed} D 14
+      - edgy: Gen.java {seed} ULD 15
+      - edgy: Gen.java {seed} UL 15
+      - edgy: Gen.java {seed} UD 15
+      - edgy: Gen.java {seed} LD 15
+      - edgy: Gen.java {seed} U 15
+      - edgy: Gen.java {seed} L 15
+      - edgy: Gen.java {seed} D 15
+      - edgy: Gen.java {seed} ULD 16
+      - edgy: Gen.java {seed} UL 16
+      - edgy: Gen.java {seed} UD 16
+      - edgy: Gen.java {seed} LD 16
+      - edgy: Gen.java {seed} U 16
+      - edgy: Gen.java {seed} L 16
+      - edgy: Gen.java {seed} D 16
+      - edgy: Gen.java {seed} ULD 17
+      - edgy: Gen.java {seed} UL 17
+      - edgy: Gen.java {seed} UD 17
+      - edgy: Gen.java {seed} LD 17
+      - edgy: Gen.java {seed} U 17
+      - edgy: Gen.java {seed} L 17
+      - edgy: Gen.java {seed} D 17
+
       # You can re-use the input validator by symlinking it as `generator` in
       # this directory. Below is some inspiration for test cases.
       #
