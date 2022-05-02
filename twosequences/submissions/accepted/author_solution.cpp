@@ -4,6 +4,9 @@
 using namespace std;
 
 bool can(const vector<int> & a, const vector<int> & b, int k, int x) {
+    if (x == -1) {
+        return true;
+    }
     int n = a.size();
     int m = b.size();
     int i = 0;
@@ -41,6 +44,9 @@ bool can(const vector<int> & a, const vector<int> & b, int k, int x) {
 }
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+
     int n, m, k;
     cin >> n >> m >> k;
 
@@ -53,7 +59,7 @@ int main() {
         cin >> b[j];
     }
 
-    int l = 0;
+    int l = -1;
     int r = 1e9;
     while (l + 1 != r) {
         int mid = (l + r) / 2;
