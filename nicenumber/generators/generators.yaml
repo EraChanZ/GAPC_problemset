@@ -57,6 +57,11 @@ data:
       - large: generator {seed:03} -n 1000000..100000000
       - large: generator {seed:04} -n 1000000..100000000
       - large: generator {seed:05} -n 1000000..100000000
+      - large: generator {seed:06} -n 1000000..100000000
+      - large: generator {seed:07} -n 1000000..100000000
+      - large: generator {seed:08} -n 1000000..100000000
+      - large: generator {seed:09} -n 1000000..100000000
+      - large: generator {seed:10} -n 1000000..100000000
       - huge: generator {seed:01} -n 100000000..1000000000
       - huge: generator {seed:02} -n 100000000..1000000000
       - huge: generator {seed:03} -n 100000000..1000000000

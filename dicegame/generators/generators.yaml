@@ -50,6 +50,11 @@ data:
       - medium: generator {seed:03} -n 10..100 -m 2..100
       - medium: generator {seed:04} -n 10..100 -m 2..100
       - medium: generator {seed:05} -n 10..100 -m 2..100
+      - medium: generator {seed:06} -n 10..100 -m 2..100
+      - medium: generator {seed:07} -n 10..100 -m 2..100
+      - medium: generator {seed:08} -n 10..100 -m 2..100
+      - medium: generator {seed:09} -n 10..100 -m 2..100
+      - medium: generator {seed:10} -n 10..100 -m 2..100
       - large: generator {seed:01} -n 100..1000 -m 2..1000
       - large: generator {seed:02} -n 100..1000 -m 2..1000
       - large: generator {seed:03} -n 100..1000 -m 2..1000
