@@ -72,6 +72,27 @@ data:
       - huge: generator {seed:08} -n 100000000..1000000000
       - huge: generator {seed:09} -n 100000000..1000000000
       - huge: generator {seed:10} -n 100000000..1000000000
+      # Gen.java SEED LENGTH PRIME_COUNT
+      - double: Gen.java {seed:01} 9 2
+      - double: Gen.java {seed:02} 9 2
+      - double: Gen.java {seed:03} 9 2
+      - double: Gen.java {seed:04} 9 2
+      - double: Gen.java {seed:05} 9 2
+      - double: Gen.java {seed:06} 9 2
+      - double: Gen.java {seed:07} 9 2
+      - double: Gen.java {seed:08} 9 2
+      - double: Gen.java {seed:09} 9 2
+      - double: Gen.java {seed:10} 9 2
+      - triple: Gen.java {seed:01} 9 3
+      - triple: Gen.java {seed:02} 9 3
+      - triple: Gen.java {seed:03} 9 3
+      - triple: Gen.java {seed:04} 9 3
+      - triple: Gen.java {seed:05} 9 3
+      - triple: Gen.java {seed:06} 9 3
+      - triple: Gen.java {seed:07} 9 3
+      - triple: Gen.java {seed:08} 9 3
+      - triple: Gen.java {seed:09} 9 3
+      - triple: Gen.java {seed:10} 9 3
       # You can re-use the input validator by symlinking it as `generator` in
       # this directory. Below is some inspiration for test cases.
       #
