@@ -9,20 +9,22 @@
 \newcommand{\minn}{0}
 \newcommand{\maxn}{1000}
 
-You have a picture, which looks like a rectangle with the sides W and H. Every day you rotate the picture for 1 degree. As you rotate the picture, you observe its bounding box - the smallest rectangle with the sides parallel to the axes that contains the rotated picture. 
+Pictures are beautiful, and they look even better if you rotate them!
 
-You've noticed that the area of bounding box is often bigger than the area of the picture. Given W, H and the day N, print the difference between the areas.
+You have a picture, which has a shape of rectangle with the sides $w$ and $h$. Every day you rotate the picture for 1 degree. As you rotate the picture, you observe its bounding box - the smallest rectangle with the sides parallel to the axes that fully contains the rotated picture. 
+
+You've noticed that the area of bounding box is often bigger than the area of the picture. Given $w$, $h$ and the day $d$, find the difference between these areas.
 
 \begin{Input}
     The input consists of one line containing three space separated integers:
     \begin{itemize}
-        \item Picture width $W$ ($\mina \leq W\leq \maxa$).
-        \item Picture height $H$ ($\mina \leq H\leq \maxa$).
-        \item Number of days $N$ ($\minn \leq N\leq \maxn$).
+        \item Picture width $w$ ($\mina \leq w\leq \maxa$).
+        \item Picture height $h$ ($\mina \leq h\leq \maxa$).
+        \item Number of days $d$ ($\minn \leq d\leq \maxn$).
     \end{itemize}
 \end{Input}
 
 \begin{Output}
-    Output the difference between the area of the bounding box and the area of the picture.
+    Print the difference between the area of the bounding box and the area of the picture after $d$ days.
     Your answer should have an absolute or relative error of at most $10^{-6}$.
 \end{Output}

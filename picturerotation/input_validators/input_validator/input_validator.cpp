@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
     v.space();
     int h = v.read_integer("h", 1, 100);
     v.space();
-    int n = v.read_integer("n", 0, 1000);
+    int d = v.read_integer("d", 0, 1000);
     v.newline();
 
     return 0;

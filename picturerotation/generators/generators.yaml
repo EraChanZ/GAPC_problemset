@@ -44,36 +44,36 @@ data:
       - manual: stdout.py 7 9 800
       - manual: stdout.py 7 9 900
       - manual: stdout.py 7 9 1000
-      - tiny: generator {seed:01} -w 1..5 -h 1..5 -n 1..90
-      - tiny: generator {seed:02} -w 1..5 -h 1..5 -n 1..90
-      - tiny: generator {seed:03} -w 1..5 -h 1..5 -n 1..90
-      - tiny: generator {seed:04} -w 1..5 -h 1..5 -n 1..90
-      - tiny: generator {seed:05} -w 1..5 -h 1..5 -n 1..90
-      - small: generator {seed:01} -w 1..10 -h 1..10 -n 1..1000
-      - small: generator {seed:02} -w 1..10 -h 1..10 -n 1..1000
-      - small: generator {seed:03} -w 1..10 -h 1..10 -n 1..1000
-      - small: generator {seed:04} -w 1..10 -h 1..10 -n 1..1000
-      - small: generator {seed:05} -w 1..10 -h 1..10 -n 1..1000
-      - medium: generator {seed:01} -w 50..100 -h 50..100 -n 1..1000
-      - medium: generator {seed:02} -w 50..100 -h 50..100 -n 1..1000
-      - medium: generator {seed:03} -w 50..100 -h 50..100 -n 1..1000
-      - medium: generator {seed:04} -w 50..100 -h 50..100 -n 1..1000
-      - medium: generator {seed:05} -w 50..100 -h 50..100 -n 1..1000
-      - large: generator {seed:01} -w 90..100 -h 90..100 -n 100..1000
-      - large: generator {seed:02} -w 90..100 -h 90..100 -n 100..1000
-      - large: generator {seed:03} -w 90..100 -h 90..100 -n 100..1000
-      - large: generator {seed:04} -w 90..100 -h 90..100 -n 100..1000
-      - large: generator {seed:05} -w 90..100 -h 90..100 -n 100..1000
-      - low: generator {seed:01} -w 1..10 -h 90..100 -n 1..1000
-      - low: generator {seed:02} -w 1..10 -h 90..100 -n 1..1000
-      - low: generator {seed:03} -w 1..10 -h 90..100 -n 1..1000
-      - low: generator {seed:04} -w 1..10 -h 90..100 -n 1..1000
-      - low: generator {seed:05} -w 1..10 -h 90..100 -n 1..1000
-      - high: generator {seed:01} -w 90..100 -h 1..10 -n 1..1000
-      - high: generator {seed:02} -w 90..100 -h 1..10 -n 1..1000
-      - high: generator {seed:03} -w 90..100 -h 1..10 -n 1..1000
-      - high: generator {seed:04} -w 90..100 -h 1..10 -n 1..1000
-      - high: generator {seed:05} -w 90..100 -h 1..10 -n 1..1000
+      - tiny: generator {seed:01} -w 1..5 -h 1..5 -d 1..90
+      - tiny: generator {seed:02} -w 1..5 -h 1..5 -d 1..90
+      - tiny: generator {seed:03} -w 1..5 -h 1..5 -d 1..90
+      - tiny: generator {seed:04} -w 1..5 -h 1..5 -d 1..90
+      - tiny: generator {seed:05} -w 1..5 -h 1..5 -d 1..90
+      - small: generator {seed:01} -w 1..10 -h 1..10 -d 1..1000
+      - small: generator {seed:02} -w 1..10 -h 1..10 -d 1..1000
+      - small: generator {seed:03} -w 1..10 -h 1..10 -d 1..1000
+      - small: generator {seed:04} -w 1..10 -h 1..10 -d 1..1000
+      - small: generator {seed:05} -w 1..10 -h 1..10 -d 1..1000
+      - medium: generator {seed:01} -w 50..100 -h 50..100 -d 1..1000
+      - medium: generator {seed:02} -w 50..100 -h 50..100 -d 1..1000
+      - medium: generator {seed:03} -w 50..100 -h 50..100 -d 1..1000
+      - medium: generator {seed:04} -w 50..100 -h 50..100 -d 1..1000
+      - medium: generator {seed:05} -w 50..100 -h 50..100 -d 1..1000
+      - large: generator {seed:01} -w 90..100 -h 90..100 -d 100..1000
+      - large: generator {seed:02} -w 90..100 -h 90..100 -d 100..1000
+      - large: generator {seed:03} -w 90..100 -h 90..100 -d 100..1000
+      - large: generator {seed:04} -w 90..100 -h 90..100 -d 100..1000
+      - large: generator {seed:05} -w 90..100 -h 90..100 -d 100..1000
+      - low: generator {seed:01} -w 1..10 -h 90..100 -d 1..1000
+      - low: generator {seed:02} -w 1..10 -h 90..100 -d 1..1000
+      - low: generator {seed:03} -w 1..10 -h 90..100 -d 1..1000
+      - low: generator {seed:04} -w 1..10 -h 90..100 -d 1..1000
+      - low: generator {seed:05} -w 1..10 -h 90..100 -d 1..1000
+      - high: generator {seed:01} -w 90..100 -h 1..10 -d 1..1000
+      - high: generator {seed:02} -w 90..100 -h 1..10 -d 1..1000
+      - high: generator {seed:03} -w 90..100 -h 1..10 -d 1..1000
+      - high: generator {seed:04} -w 90..100 -h 1..10 -d 1..1000
+      - high: generator {seed:05} -w 90..100 -h 1..10 -d 1..1000
       # You can re-use the input validator by symlinking it as `generator` in
       # this directory. Below is some inspiration for test cases.
       #
