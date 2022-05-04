@@ -4,23 +4,28 @@
 % Source: URL to image.
 
 % optionally define variables/limits for this problem
-\newcommand{\minn}{1}
+\newcommand{\minn}{2}
 \newcommand{\maxn}{1000}
-\newcommand{\minm}{1}
+\newcommand{\minm}{2}
 \newcommand{\maxm}{1000}
 
-N people are playing a game: they throw a dice with M sides. They do it in order: person 1, person 2, ... person N, person 1 again, person 2 again and so on. The first one to see the side "1" wins.
-For each person, what is the probability to win?
+Playing games is fun, and it's even more fun when everyone has a chance to win!
+
+There are $n$ people playing a game. They throw a dice with $m$ sides showing numbers from 1 to $m$. The player who rolls the side 1 immediately wins.
+
+The players go in order: player 1, player 2 and so on. If nobody wins after $n$ turns, player 1 goes again.
+
+For each player calculate the probability to win the game.
 
 \begin{Input}
     The input consists of one line containing two integers:
     \begin{itemize}
-        \item Number of people $N$ ($\minn \leq N\leq \maxn$).
-        \item Number of dice sides $M$ ($\minm \leq M\leq \maxm$).
+        \item Number of players $n$ ($\minn \leq n\leq \maxn$).
+        \item Number of dice sides $m$ ($\minm \leq m\leq \maxm$).
     \end{itemize}
 \end{Input}
 
 \begin{Output}
-    Print $N$ space separated floating point numbers: winning chances of each person.
+    Print $n$ space separated floating point numbers: winning chances of each player.
     Your answer should have an absolute or relative error of at most $10^{-6}$.
 \end{Output}
