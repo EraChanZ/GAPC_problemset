@@ -7,21 +7,23 @@
 \newcommand{\minlen}{1}
 \newcommand{\maxlen}{20}
 
-Strong password has the following requirements:
+Passwords are important, and it's even more important to keep your passwords strong!
+
+Let's call a password strong if it matches the following requirements:
 \begin{itemize}
-\item 8 to 16 character long.
+\item Has length between 8 and 16 characters.
 \item Contains at least one lower case letter.
 \item Contains at least one upper case letter.
 \item Contains at least one digit.
 \end{itemize}
 
-Some passwords are already strong, but some passwords can get strong by adding just one character.
+Some passwords are already strong; some other passwords can become strong after adding more letters or digits.
 Given a password, is it possible to turn it into a strong one by appending at most one character?
 
 \begin{Input}
-    The input consists of one line containing a single string $pwd$ ($\minlen \leq len(pwd)\leq \maxlen$), the password.
+    The input is a single line containing password $p$. The given password consists of Latin characters and digits and has length between $\minlen$ and $\maxlen$ characters.
 \end{Input}
 
 \begin{Output}
-    Print YES if it's possible to turn the password into a strong one by appending at most one character, otherwise print NO.
+    Print YES if the password is already strong or can become strong after appending one character, otherwise print NO.
 \end{Output}
