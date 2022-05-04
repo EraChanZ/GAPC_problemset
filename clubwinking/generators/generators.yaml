@@ -1,13 +1,13 @@
-solution: /submissions/accepted/solution.py
+solution: /submissions/accepted/author_solution.py
 #visualizer: /visualizers/asy.sh {name}
 # By default, generated files are not ignored.
-gitignore_generated: true
+#gitignore_generated: false
 
 data:
   sample:
     type: directory
     # Uncomment to disable generating ans files for sample cases.
-    solution: /submissions/accepted/solution.py
+    #solution:
     data:
       # Some small examples showing to help understanding of the problem
       #'1':
@@ -49,9 +49,7 @@ data:
       #- small: generator {seed} -n 3
       #- small: generator {seed} -n 7
       #- small: generator {seed} -n 13
-      - small_perfect: generate_testcase.py {seed:123} 20 20 5
-      - small_perfect: generate_testcase.py {seed:345} 20 20 4
-      - small_perfect: generate_testcase.py {seed:444} 20 20 3
+      #- medium: generator {seed} -n 85
       #- medium: generator {seed} -n 103
       #- medium: generator {seed} -n 243
       #- large: generator {seed} -n 991

@@ -1,0 +1,31 @@
+\problemname{\problemyamlname}
+
+\illustration{0.3}{image.jpeg}{}
+% Source: URL to image.
+
+% optionally define variables/limits for this problem
+\newcommand{\maxa}{123456789}
+
+After a long night find yourself in a $n$-dimensional dancing club with transparent people that give off different vibes. 
+You are very extroverted but very tired, so you would like to meet as many people with different vibes as possible with as little action as possible.
+You decide to go with winking. Now you just have to figure out the direction of your wink, which will be caught by the transparent dancing people.
+So, if multiple people were standing collinearly (in a straight line), they can all be caught with a single wink (they’re transparent, after all). However, you are interested in meeting people with different vibes, so you want to maximize the number of different vibes of the people that can be caught by a single wink. Assume that you can choose where you stand, i.e. you can cast your wink from any position.
+If there are multiple possibilities of catching the same maximum number of vibes with a single wink, select the wink with the largest total number of people among them. It is guaranteed that only one correct answer is possible. There can be 10 different vibes at maximum.
+Give your answer by outputting the number of people that will see your optimal wink, as well as indexes of these people.
+
+\begin{Input}
+    The input consists of:
+    \begin{itemize}
+        \item First line contains integer $ 1 \leq n < 50$ representing the number of dimensions
+        \item Second line contains integer $ 1 \leq t \leq 10^5 $ representing the total number of people in the club
+        \item The next $t$ lines each contain $n$ integers, separated by spaces, such that $ -10^8 \leq a_{i} \leq 10^8 $ where $a_i$ is the $t^{th}$ person’s position coordinate in the $i^{th}$ dimension. The line ends with a string with a maximum length of 10 characters, describing the vibe of the person.
+    \end{itemize}
+\end{Input}
+
+\begin{Output}
+    The output consists of:
+    \begin{itemize}
+        \item The first line must contain the number of people $p$ getting hit by your wink: $1 \leq p \leq t$
+        \item The next $x$ lines must contain the indices of each person intercepted by your wink, in ascending order. People are indexed in the order they appear in the input, starting from 0, i.e. indices $i$ can be in the range $0 \leq i < t$
+    \end{itemize}
+\end{Output}

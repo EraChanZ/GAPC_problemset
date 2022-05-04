@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from genericpath import exists
 import sys
 import random
@@ -33,8 +34,8 @@ while made_holes < hole_count:
             break
         continue
     tries = 0
-    for i in range(n):
-        for j in range(m):
+    for i in range(ran_x - r, ran_x + r + 1):
+        for j in range(ran_y - r, ran_y + r + 1):
             if ((ran_x - i) ** 2 + (ran_y - j) ** 2) <= (r ** 2):
                 cheese[j][i] = 0
     existant.append((ran_x, ran_y, r))

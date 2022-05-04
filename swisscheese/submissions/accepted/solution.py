@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 n, m = map(int, input().split(" "))
 
 M = [list(map(int, input().split(" "))) for _ in range(m)]
@@ -75,5 +76,6 @@ for j in range(m):
 print("normal" if f else "perfect")
 if not f:
     print(len(holes))
-    print( "\n".join( list(map(lambda x: str(x[0]) + " " + str(x[1]) + " " + str(x[2]) , holes) ) ) )
+    if (len(holes) > 0):
+        print( "\n".join( list(map(lambda x: str(x[0]) + " " + str(x[1]) + " " + str(x[2]) , holes) ) ) )
     
