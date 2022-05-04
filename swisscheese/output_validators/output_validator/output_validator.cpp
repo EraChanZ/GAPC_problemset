@@ -36,11 +36,19 @@ int main(int argc, char **argv) {
     if ( (answer.compare("perfect") != 0) && (answer.compare("normal") != 0) ) {
         v.WA("answer don't match perfect nor normal");
     }
-    int n_holes = v.read_integer("answer", 0, 1000000);
-    for (int i = 0; i < n_holes; i++) {
-        int c_x = v.read_integer("center_x", 0, 1000000);
-        int c_y = v.read_integer("center_y", 0, 1000000);
-        int r = v.read_integer("radius", 0, 1000000);
+    if (answer.compare("perfect") == 0) {
+        int n_holes = v.read_integer("answer", 0, 1000000);
+        v.newline();
+        for (int i = 0; i < n_holes; i++) {
+            int c_x = v.read_integer("center_x", 0, 1000000);
+            v.space();
+            int c_y = v.read_integer("center_y", 0, 1000000);
+            v.space();
+            int r = v.read_integer("radius", 0, 1000000);
+            v.newline();
+        }
     }
-    v.newline();
+    
+    
+    
 }
