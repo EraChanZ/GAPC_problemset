@@ -44,6 +44,8 @@ data:
       - manual: stdout.py 7 9 800
       - manual: stdout.py 7 9 900
       - manual: stdout.py 7 9 1000
+      - manual: stdout.py 1 100 45
+      - manual: stdout.py 100 1 45
       - tiny: generator {seed:01} -w 1..5 -h 1..5 -d 1..90
       - tiny: generator {seed:02} -w 1..5 -h 1..5 -d 1..90
       - tiny: generator {seed:03} -w 1..5 -h 1..5 -d 1..90

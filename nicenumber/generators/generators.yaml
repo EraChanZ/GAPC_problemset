@@ -34,6 +34,7 @@ data:
       - manual: stdout.py 39
       - manual: stdout.py 138
       - manual: stdout.py 153
+      - manual: stdout.py 205
       - manual: stdout.py 307
       - manual: stdout.py 1337
       - manual: stdout.py 135791357
