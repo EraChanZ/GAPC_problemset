@@ -31,14 +31,14 @@ def recognize(x, y):
     maxy = y
     cur_x = x
     cur_y = y
-    while not M[cur_y][x] and cur_y < m:
-        while not M[cur_y][cur_x] and cur_x >= 0:
+    while cur_y < m and not M[cur_y][x]:
+        while cur_x >= 0 and not M[cur_y][cur_x]:
             visited[cur_y][cur_x] = 1
             cur_x -= 1
         cur_x += 1
         minx = min(minx, cur_x)
         cur_x = x
-        while not M[cur_y][cur_x] and cur_x < n:
+        while cur_x < n and not M[cur_y][cur_x]:
             visited[cur_y][cur_x] = 1
             cur_x += 1
         cur_x -= 1
@@ -75,7 +75,7 @@ for j in range(m):
 print("normal" if f else "perfect")
 if not f:
     print(len(holes))
-    print( "\n".join( list(map(lambda x: f"{x[0]} {x[1]} {x[2]}", holes)) ) )
+    print( "\n".join( list(map(lambda x: str(x[0]) + " " + str(x[1]) + " " + str(x[2]) , holes) ) ) )
     
 
 

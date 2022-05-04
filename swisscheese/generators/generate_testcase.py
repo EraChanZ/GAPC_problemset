@@ -6,24 +6,25 @@ from copy import deepcopy
 def manhattan_distance(x1, y1, x2, y2):
     return abs(x1 - x2) + abs(y1 - y2)
 
-n = int(sys.argv[1])
-m = int(sys.argv[2])
+random.seed(sys.argv[1])
+n = int(sys.argv[2]) if len(sys.argv) > 2 else random.randint(5,1000)
+m = int(sys.argv[3]) if len(sys.argv) > 3 else random.randint(5,1000)
 
 cheese = [[1 for _ in range(n)] for _ in range(m)]
 
-hole_count = random.randint(1, min(10, int(0.1 * n*m)) ) if len(sys.argv) <= 3 else int(sys.argv[3])
+hole_count = random.randint(1, min(10, int(0.1 * n*m)) ) if len(sys.argv) <= 4 else int(sys.argv[4])
 made_holes = 0
 existant = []
 tries = 0
 while made_holes < hole_count:
 
-    r = max(1, int( min(n, m) * random.randint(1, 30)/100 ) ) if len(sys.argv) <= 4 else int(sys.argv[4])
+    r = max(1, int( min(n, m) * random.randint(1, 30)/100 ) ) if len(sys.argv) <= 5 else int(sys.argv[5])
     ran_x = random.randint(r, n-1-r)
     ran_y = random.randint(r, m-1-r)
     
     f = False
     for t in range(len(existant)):
-        if manhattan_distance(ran_x, ran_y, existant[t][0], existant[t][1]) < (r + existant[t][2]):
+        if manhattan_distance(ran_x, ran_y, existant[t][0], existant[t][1]) < 1.5*(r + existant[t][2]):
             f = True
             break
     if f:
