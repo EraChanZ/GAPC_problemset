@@ -9,9 +9,11 @@
 \newcommand{\minm}{3}
 \newcommand{\maxm}{500}
 
-You are visiting a movie theater, which looks like a grid with entrances, exits and available seats. You would like to enter the theater, get into some seat and leave, while covering as low distance as possible. What's the shortest distance that you can cover?
+Going to movies is amazing, and it's even better if you don't have cross the hall with popcorn and cola in your hands.
 
-Movie theater is represented as a two-dimensional grid of characters:
+You are visiting a movie theater, which has a form of rectangle with entrances, exits and available seats. You would like to enter the theater, get into some seat and leave, while covering as low distance as possible. What is the shortest distance that you must cover?
+
+Movie theater plan is represented as a two-dimensional grid of characters:
 \begin{itemize}
     \item Entrances are located on the sides and are marked with letter E.
     \item Exits are located on the sides and are marked with letter X.
@@ -23,11 +25,11 @@ Movie theater is represented as a two-dimensional grid of characters:
 \begin{Input}
     The input consists of multiple lines:
     \begin{itemize}
-        \item First line contains two integers $N$ and $M$ ($\minn \leq N \leq \maxn$, $\minm \leq M \leq \maxm$), the dimensions of the grid.
-        \item $N$ following lines describe the movie theater. Every line contains $M$ characters, each being E, X, S or a dot.
+        \item First line contains two integers $n$ and $m$ ($\minn \leq n \leq \maxn$, $\minm \leq m \leq \maxm$), the dimensions of the grid.
+        \item The following $n$ lines describe the movie theater. Every line contains $m$ characters, each being E, X, S or a dot.
      \end{itemize}
 \end{Input}
 
 \begin{Output}
-    Output one integer number: the shortest distance you could cover from an entrance to an exit through a seat.
+    Print one integer number: the shortest distance you could cover from an entrance to an exit through a seat.
 \end{Output}
