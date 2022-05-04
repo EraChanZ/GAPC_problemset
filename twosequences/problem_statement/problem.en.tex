@@ -5,32 +5,36 @@
 
 % optionally define variables/limits for this problem
 \newcommand{\minn}{2}
-\newcommand{\maxn}{100000}
+\newcommand{\maxn}{10^{5}}
 \newcommand{\minm}{2}
-\newcommand{\maxm}{100000}
+\newcommand{\maxm}{10^{5}}
 \newcommand{\mink}{2}
-\newcommand{\maxk}{100000}
+\newcommand{\maxk}{10^{5}}
 \newcommand{\mina}{0}
-\newcommand{\maxa}{1000000000}
+\newcommand{\maxa}{10^{9}}
 
-You are given two increasing sequences of integers with sizes $N$ and $M$. Choose $K$ elements from the first sequence and $K-1$ elements from the second sequence in the following way:
+Sequences are exciting, and they become even more exciting when you merge them together!
+
+You are given two increasing sequences of integers with sizes $n$ and $m$. You want the merge their elements into a new sequence in the following way:
 \begin{itemize}
+    \item Choose $k$ elements from the first sequence and $k-1$ elements from the second sequence
+    \item Join the chosen elements so that they interleave, like A B A B A B A
     \item The resulting elements should form an increasing sequence
-    \item The elements interleave, like A B A B A B A B A
-    \item The minimal difference between any two resulting elements is as large as possible
 \end{itemize}
 
-Print the largest possible minimal difference. If it's not possible to choose any increasing sequence, print $-1$.
+After the merge you want the resulting elements to be as far from each other as possible.
+
+Find the largest possible minimal difference between any two resulting elements. If it's not possible to form any increasing sequence, print $-1$.
 
 \begin{Input}
     The input consists of three lines:
     \begin{itemize}
-        \item First line containing three space separated integers $N$, $M$ and $K$ ($\minn \leq N\leq \maxn$, $\minm \leq M\leq \maxm$, $\mink \leq K\leq \maxk$, $K \leq N$, $K-1 \leq M$).
-        \item Second line containing $N$ increasing elements of the first sequence. Each element is an integer between $\mina$ and $\maxa$.
-        \item Third line containing $M$ increasing elements of the second sequence. Each element is an integer between $\mina$ and $\maxa$.
+        \item First line contains three space separated integers $n$, $m$ and $k$ ($\minn \leq n\leq \maxn$, $\minm \leq m\leq \maxm$, $\mink \leq k\leq \maxk$, $k \leq n$, $k-1 \leq m$).
+        \item Second line contains $n$ increasing elements of the first sequence. Each element is an integer between $\mina$ and $\maxa$.
+        \item Third line contains $m$ increasing elements of the second sequence. Each element is an integer between $\mina$ and $\maxa$.
     \end{itemize}
 \end{Input}
 
 \begin{Output}
-    Output one integer number: the largest possible minimal difference between the elements of the resulting sequence. If the increasing sequence can't be built, output $-1$.
+    Print one integer number: the largest possible minimal difference between the elements of the resulting sequence. If the increasing sequence can't be built, print $-1$.
 \end{Output}
