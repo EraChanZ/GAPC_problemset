@@ -1,0 +1,33 @@
+\problemname{Make the teams}
+
+\illustration{0.3}{image.png}{}
+% Source: URL to image.
+
+% optionally define variables/limits for this problem
+\newcommand{\maxa}{123456789}
+
+In the past, when Gandalf was fighting Darth Vader, there was once a GAPC Edition 0, which consisted of 3 problems: 
+one about dynamic programming, one about graphs and one about number theory. 
+There were teams consisting of 1 or 2 students. 
+There were also some very advanced machine learning algorithms which could precisely assess how difficult each problem was,
+and assign it a difficulty value. Moreover, they could also assess how capable a student was at solving a 
+certain kind of a problem, and assigning them a corresponding knowledge score, 
+by using the precise power of the random number generator. 
+In order to solve a problem, a student must have a capability score for that kind of problem that 
+is at least equal to the difficulty of the problem. 
+It is your job to tell us if it was possible to organise the students in teams of 1 or 2 students, in such a way that all the teams could have solved at least 2 problems in that contest. 
+The problems that can be solved have to be different, i.e. if 2 students from the same team can both solve one of the problems,
+that does not count as two problems solved.
+
+\begin{Input}
+    The input consists of:
+    \begin{itemize}
+        \item First line consists of three numbers $a, b, c$ with $0 \leq a, b, c \leq 10^{10}$ which represent the difficulty levels of the dynamic programming problem, the graphs problem and the number theory problem, respectively. 
+        \item Second line represents the number of students $N$ with $1 \leq N \leq 10^6$ that participated in the contest.
+        \item Then, $N$ lines, each containing 3 numbers $x, y, z$ with $0 \leq x, y, z \leq 10^{10}$ which represent a student's knowledge score for the dynamic programming problem, the graphs problem and the number theory problem, respectively.
+    \end{itemize}
+\end{Input}
+
+\begin{Output}
+    'Yes', if it is possible to organise the students in teams of 1 or 2, such that every team solves at least two problems in the contest, otherwise 'No'.
+\end{Output}
