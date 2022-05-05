@@ -1,7 +1,7 @@
 solution: /submissions/accepted/author_solution.cpp
 #visualizer: /visualizers/asy.sh {name}
 # By default, generated files are not ignored.
-gitignore_generated: true
+gitignore_generated: false
 
 data:
   sample:
