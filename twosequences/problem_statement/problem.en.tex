@@ -15,26 +15,28 @@
 
 Sequences are exciting, and they become even more exciting when you merge them together!
 
-You are given two increasing sequences of integers with sizes $n$ and $m$. You want the merge their elements into a new sequence in the following way:
+You are given two non-decreasing sequences of integers with sizes $n$ and $m$. Merge their elements into a new sequence in the following way:
 \begin{itemize}
     \item Choose $k$ elements from the first sequence and $k-1$ elements from the second sequence
     \item Join the chosen elements so that they interleave, like A B A B A B A
-    \item The resulting elements should form an increasing sequence
+    \item The resulting elements should form a non-decreasing sequence
 \end{itemize}
 
 After the merge you want the resulting elements to be as far from each other as possible.
 
-Find the largest possible minimal difference between any two resulting elements. If it's not possible to form any increasing sequence, print $-1$.
+Let's say that $distance$ is the minimal difference between any two resulting elements. Your goal is to choose the elements in a way that maximises the $distance$.
+
+Find and print the largest possible $distance$. If it's not possible to form any non-decreasing sequence, print $-1$.
 
 \begin{Input}
     The input consists of three lines:
     \begin{itemize}
         \item First line contains three space separated integers $n$, $m$ and $k$ ($\minn \leq n\leq \maxn$, $\minm \leq m\leq \maxm$, $\mink \leq k\leq \maxk$, $k \leq n$, $k-1 \leq m$).
-        \item Second line contains $n$ increasing elements of the first sequence. Each element is an integer between $\mina$ and $\maxa$.
-        \item Third line contains $m$ increasing elements of the second sequence. Each element is an integer between $\mina$ and $\maxa$.
+        \item Second line contains $n$ non-decreasing elements of the first sequence. Each element is an integer between $\mina$ and $\maxa$.
+        \item Third line contains $m$ non-decreasing elements of the second sequence. Each element is an integer between $\mina$ and $\maxa$.
     \end{itemize}
 \end{Input}
 
 \begin{Output}
-    Print one integer number: the largest possible minimal difference between the elements of the resulting sequence. If the increasing sequence can't be built, print $-1$.
+    Print one integer number: the largest possible minimal difference between the elements of the resulting sequence. If the non-decreasing sequence can't be built, print $-1$.
 \end{Output}
