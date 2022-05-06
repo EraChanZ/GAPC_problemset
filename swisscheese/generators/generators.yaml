@@ -52,6 +52,36 @@ data:
       - small_perfect: generate_testcase.py {seed:123} 20 20 5
       - small_perfect: generate_testcase.py {seed:345} 20 20 4
       - small_perfect: generate_testcase.py {seed:444} 20 20 3
+      - small_normal: generate_testcase.py {seed:2348} 20 20 5 normal
+      - small_normal: generate_testcase.py {seed:1911} 20 20 4 normal
+      - small_normal: generate_testcase.py {seed:5931} 20 20 3 normal
+      - small_random: generator {seed:284392} -n 10..30 -m 10..30
+      - small_random: generator {seed:3492} -n 10..30 -m 10..30
+      - small_random: generator {seed:429234} -n 10..30 -m 10..30
+      - small_random: generator {seed:5634958} -n 10..30 -m 10..30
+
+      - normal_perfect: generate_testcase.py {seed:243893} 100 80 10
+      - normal_perfect: generate_testcase.py {seed:123434} 90 120 20
+      - normal_perfect: generate_testcase.py {seed:13243} 60 100 15
+      - normal_normal: generate_testcase.py {seed:14333} 10 200 10 normal
+      - normal_normal: generate_testcase.py {seed:5934} 85 63 20 normal
+      - normal_normal: generate_testcase.py {seed:456} 150 99 15 normal
+      - normal_random: generator {seed:09843} -n 60..150 -m 60..150
+      - normal_random: generator {seed:456672} -n 60..150 -m 60..150
+      - normal_random: generator {seed:4392036} -n 60..150 -m 60..150
+      - normal_random: generator {seed:643649} -n 60..150 -m 60..150
+
+      - large_perfect: generate_testcase.py {seed:401343} 800 50 100
+      - large_perfect: generate_testcase.py {seed:9385293} 1000 500 3
+      - large_perfect: generate_testcase.py {seed:41482935} 562 777 1
+      - large_perfect: generate_testcase.py {seed:237332} 1000 1000 100
+      - large_normal: generate_testcase.py {seed:32393} 1000 900 50 normal
+      - large_normal: generate_testcase.py {seed:93623} 900 500 5 normal
+      - large_normal: generate_testcase.py {seed:162732} 800 350 100 normal
+      - large_random: generator {seed:384324} -n 600.1000 -m 600.1000
+      - large_random: generator {seed:991512} -n 600.1000 -m 600.1000
+      - large_random: generator {seed:152681} -n 600.1000 -m 600.1000
+      - large_random: generator {seed:1520422} -n 600.1000 -m 600.1000
       #- medium: generator {seed} -n 103
       #- medium: generator {seed} -n 243
       #- large: generator {seed} -n 991
