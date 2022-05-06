@@ -1,0 +1,11 @@
+\begin{frame}
+    \frametitle{\problemtitle}
+    \begin{itemize}
+        \item<+-> \textbf{Problem:} There are $n$ players throwing $m$-sided dice in turns, one by one. What is each player's chance to win by rolling the side 1?
+        \item<+-> \textbf{Solution:} Simulate the game turn by turn and accumulate the effects of every turn. At the turn $k$ the probability that we still play is $(\frac{m-1}{m})^k$, and the probability that the current player wins is $\frac{1}{m}$. Multiply these two probabilities and add them to the current player's chances.
+        \item<+-> When shall you stop the simulation? It only makes sense to continue while the current probability $(\frac{m-1}{m})^k$ is large enough to contribute to the answer. For example, you could stop once the probability reaches $10^{-10}$.
+        \item<+-> After $10^5$ turns the chances to still be in the game are at most ${\frac{999}{1000}}^{100000}$, which is less than $10^{-43}$. So, $10^5$ turns is definitely enough, but for the most tests you'll need much less.
+        \item<+-> Potential improvement: you can infer an $\mathcal O(n)$ solution from the simulation if you represent each player's chances as the series and find their limits.
+    \end{itemize}
+    %\solvestats
+\end{frame}
