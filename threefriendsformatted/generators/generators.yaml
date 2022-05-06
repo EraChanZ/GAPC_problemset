@@ -1,4 +1,4 @@
-#solution: /submissions/accepted/submission.py
+solution: /submissions/accepted/ThreeFriends.cpp
 #visualizer: /visualizers/asy.sh {name}
 # By default, generated files are not ignored.
 #gitignore_generated: false
@@ -7,7 +7,7 @@ data:
   sample:
     type: directory
     # Uncomment to disable generating ans files for sample cases.
-    #solution:
+    solution: /submissions/accepted/ThreeFriends.cpp
     data:
       # Some small examples showing to help understanding of the problem
       #'1':
@@ -44,14 +44,25 @@ data:
 
       # Typically, small test cases are more likely to find bugs/edge cases.
       # When the limit on n is 1000, do something like:
-      #- small: generator {seed} -n 1
-      #- small: generator {seed} -n 2
-      #- small: generator {seed} -n 3
-      #- small: generator {seed} -n 7
-      #- small: generator {seed} -n 13
-      #- medium: generator {seed} -n 85
-      #- medium: generator {seed} -n 103
-      #- medium: generator {seed} -n 243
-      #- large: generator {seed} -n 991
-      #- large: generator {seed} -n 999
-      #- large: generator {seed} -n 1000
+      - small: generator {seed:141178432}   -k 5..50 -xi 0..1000
+      - small: generator {seed:14672422} -k 5..50 -xi 0..1000000
+      - small: generator {seed:1467823432} -k 5..50 -xi 0..1000000
+      - small: generator {seed:111122} -k 5..50 -xi 0..100000000
+      - small: generator {seed:146248432}  -k 5..50 -xi 0..10
+      - small: generator {seed:1467232332} -k 5..50 -xi 0..10000000
+      - small: generator {seed:14678233432} -k 5..50 -xi 0..100000000
+      - small: generator {seed:2338432} -k 5..50 -xi 0..100000000
+      - small: generator {seed:923923} -k 5..50 -xi 0..10000
+      - small: generator {seed:3448432}  -k 5..50 -xi 0..100000000
+      - medium: generator {seed:94399834}  -k 1000..10000 -xi 0..1000000000000
+      - medium: generator {seed:5223234} -k 1000..10000 -xi 0..10000
+      - medium: generator {seed:243479834} -k 1000..10000 -xi 0..10000000
+      - medium: generator {seed:55346834}  -k 1000..10000 -xi 0..1000000000000
+      - medium: generator {seed:59329834} -k 1000..10000 -xi 0..1000000000
+      - medium: generator {seed:5228334} -k 1000..10000 -xi 0..1000000000000
+      - large: generator {seed:2324498} -k 100000..500000  -xi 0..1000000000000
+      - large: generator {seed:2343984298} -k 100000..500000  -xi 0..10000
+      - large: generator {seed:43384298} -k 100000..500000 -xi 0..1000000000000
+      - large: generator {seed:23444298} -k 100000..500000 -xi 0..1000000000
+      - large: generator {seed:239998} -k 100000..500000 -xi 0..1000000
+      - large: generator {seed:2931298} -k 100000..500000 -xi 0..1000000000000

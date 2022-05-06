@@ -53,7 +53,7 @@ int main()
 	// we print the name of the person with the most wins
 	if (max(max(arnold, harmen), andrea) == andrea)
 	{
-		cout << "Andrea";
+		cout << "Andrea\n";
 
 	/*	if (arnold == harmen)
 		{
@@ -72,7 +72,7 @@ int main()
 
 	if (max(max(arnold, harmen), andrea) == arnold)
 	{
-		cout << "Arnold";
+		cout << "Arnold\n";
 	
 		/*
 		if (harmen == arnold)
@@ -90,7 +90,7 @@ int main()
 	else
 	{
 
-		cout << "Harmen";
+		cout << "Harmen\n";
 
 		/*
 		if (andrea == arnold)
@@ -109,6 +109,5 @@ int main()
 
 	//fin.close();
 	//fout.close();
-
 	return 0;
 }
