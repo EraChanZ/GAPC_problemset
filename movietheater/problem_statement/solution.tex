@@ -1,0 +1,11 @@
+\begin{frame}
+    \frametitle{\problemtitle}
+    \begin{itemize}
+        \item<+-> \textbf{Problem:} Given a grid with multiple characters E and X on the sides and multiple characters S in the center, find the shortest path from any E to any X through any S.
+        \item<+-> \textbf{Naive solution:} The simplest idea is to try all the combinations of E, S and X in three nested for-loops. That will be $\mathcal O(n^4)$, which is too slow.
+        \item<+-> \textbf{Solution:} For every S find its closest E and its closest X, sum their distances up. Print the minimal distance among all the S.
+        \item<+-> This can be done in several ways. One way: use the fact that every side is one dimensional. Put all the E and X in tree sets (per side). For each S use lower and upper bounds in the sets to find the closest elements. Complexity: $\mathcal O(n^2*log(n))$.
+        \item<+-> Another way: for every cell of the grid precompute the distances to the closest E and to the closest X. It can be done with BFS which starts from multiple sources. Iterate through every S and immediately check its distance. Complexity: $\mathcal O(n^2)$
+    \end{itemize}
+    % \solvestats
+\end{frame}

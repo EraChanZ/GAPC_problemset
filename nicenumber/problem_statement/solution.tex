@@ -1,0 +1,10 @@
+\begin{frame}
+    \frametitle{\problemtitle}
+    \begin{itemize}
+        \item<+-> \textbf{Problem:} Given a number, tell if its digits can be split into one or several prime numbers.
+        \item<+-> \textbf{Solution:} Try all the possible splits and check if the resulting numbers are prime. Pay special attention to leading zeroes! 
+        \item<+-> One of the possible implementations is to iterate over all the $2^{len-1}$ possible splits (imagine putting separators between the digits).
+        \item<+-> Another approach is recursion. Create a function that determines whether the number is nice or not. Inside the function split the number into $prefix+rest$. The $prefix$ should be prime, and the $rest$ should be nice (recursively).
+    \end{itemize}
+    % \solvestats
+\end{frame}

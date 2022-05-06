@@ -1,0 +1,9 @@
+\begin{frame}
+    \frametitle{\problemtitle}
+    \begin{itemize}
+        \item<+-> \textbf{Problem:} Given two non-decreasing sequences with lengths $n$ and $m$, select $k$ and $k-1$ of their elements and merge them into a new non-decreasing interleaving sequence. Maximize the distance between any two resulting elements, print that distance.
+        \item<+-> \textbf{Solution:} Run a binary search on the answer. Within a single binary search iteration, for the given value $x$ greedily build the resulting sequence by alternately taking elements from the sequences while respecting the distance $x$.
+        \item<+-> Complexity: $\mathcal O(n*log(MX))$, where $MX \approx 10^9$ is the largest possible answer.
+    \end{itemize}
+    % \solvestats
+\end{frame}
