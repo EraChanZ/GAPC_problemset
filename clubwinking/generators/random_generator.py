@@ -3,12 +3,8 @@
 import sys
 import random
 import string
-from math import gcd, ceil
-import random
+from math import gcd
 import time
-
-def random_vec(n):
-    return [random.randint(-point_range, point_range) for _ in range(n)]
 
 subtract_vecs = lambda vec1, vec2, n: tuple(vec1[i] - vec2[i] for i in range(n))
 
@@ -56,56 +52,33 @@ def solve(n, t, points, toprint=True):
 
     return count_notunique == 0
 
+
 randomstring = lambda : "".join([random.choice(string.ascii_lowercase) for _ in range(random.randint(1, 10))])
-
-ran_seed = int(sys.argv[1]) if len(sys.argv) > 1 else time.time()
+ran_seed = int(sys.argv[1]) if len(sys.argv) >= 2 else time.time()
 random.seed(ran_seed)
-n = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[1] != "skip" else random.randint(1, 100)
-t = int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[2] != "skip" else random.randint(1, 10**5)
-point_range = int(sys.argv[4]) if len(sys.argv) > 4 else 100000
-scalar_range = int(sys.argv[5]) if len(sys.argv) > 5 else 100000
+n = int(sys.argv[2]) if len(sys.argv) >= 3 else random.randint(1, 50)
+t = int(sys.argv[3]) if len(sys.argv) >= 4 else random.randint(1, 10**3)
+point_value_range = int(sys.argv[4]) if len(sys.argv) >= 5 else 1000
+n_colors = int(sys.argv[5]) if len(sys.argv) >= 6 else random.randint(1, 10)
 
-rem_t = t
-while True:
-    k = random.randint(1, t) if n > 1 else 1
-    colors = random.randint(1, 10)
-    color_names = [randomstring() for _ in range(colors)]
-    distrib = [0] + sorted(random.sample(range(1, t), k - 1)) + [t]
-    pts = {}
-    for i in range(k):
-        am_points = distrib[i + 1] - distrib[i]
-        vec_line = normalize_vec(random_vec(n), n)
-        for _ in range(am_points):
-            ass_color = random.choice(color_names)
-            scalar = random.randint(-scalar_range, scalar_range)
-            while tuple([el * scalar for el in vec_line]) in pts:
-                scalar = random.randint(-scalar_range, scalar_range)
-            pts[tuple([el * scalar for el in vec_line])] = ass_color
-    pts = list(pts.items())
-    pts = [ tuple(list(pts[i][0]) + [pts[i][1]]) for i in range(t)]
-    if solve(n, t, pts, toprint = False):
-        break
+def gen_testcase(n, t, point_value_range, n_colors, toprint=True):
+    allstrings = [randomstring() for _ in range(n_colors)]
+    points = {}
+
+    for i in range(t):
+        p = tuple([random.randint(-point_value_range, point_value_range) for _ in range(n)])
+        while p in points:
+            p = tuple([random.randint(-point_value_range, point_value_range) for _ in range(n)])
+        points[p] = random.choice(allstrings)
+    points_items = list(points.items())
+    return list(map(lambda x: tuple(list(x[0]) + [x[1]]), points_items))
+
+cur_points = gen_testcase(n, t, point_value_range, n_colors)
+sol_out = solve(n, t, cur_points, toprint=False)
+while not sol_out:
+    cur_points = gen_testcase(n, t, point_value_range, n_colors)
+    sol_out = solve(n, t, cur_points, toprint=False)
 
 print(n)
 print(t)
-random.shuffle(pts)
-for p in pts:
-    print( *list(p) )
-
-
-
-"""
-
-total of t
-k number of lines 
-
-x > math.ceil((t - x) / (k - 1))
-
-x > (t - x) / (k - 1)
-(k - 1) * x > (t - x)
-kx - x + x > t
-kx > t
-x > t/k
-
-
-"""
+print( *list(map(lambda x: " ".join(list(map(str, x))), cur_points)), sep="\n" )

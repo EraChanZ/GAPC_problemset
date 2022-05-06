@@ -44,14 +44,21 @@ data:
 
       # Typically, small test cases are more likely to find bugs/edge cases.
       # When the limit on n is 1000, do something like:
-      #- small: generator {seed} -n 1
-      #- small: generator {seed} -n 2
-      #- small: generator {seed} -n 3
-      #- small: generator {seed} -n 7
-      #- small: generator {seed} -n 13
-      #- medium: generator {seed} -n 85
-      #- medium: generator {seed} -n 103
-      #- medium: generator {seed} -n 243
-      #- large: generator {seed} -n 991
-      #- large: generator {seed} -n 999
-      #- large: generator {seed} -n 1000
+      - small: testcase_generator.py 2452435 2 10 10 100
+      - small: testcase_generator.py 3634565 1 30 50 100
+      - small: testcase_generator.py 2983589 2 5 100 20
+      - small: testcase_generator.py 83465039 3 15 100 100
+      - small: testcase_generator.py 293849023  7 20 100 100
+      - small: testcase_generator.py 29384 20 10 100 100
+      - small: testcase_generator.py 2324923 20 10 100 100
+      - small: testcase_generator.py 322344 20 10 100 100
+      - medium: testcase_generator.py 324955 2 100 500 50
+      - medium: testcase_generator.py 2439854 12 200 500 100
+      - medium: testcase_generator.py 245455 24 150 500 100
+      - medium: testcase_generator.py 92932 12 200 1500 100
+      - medium: testcase_generator.py 253984 24 150 500 100
+      - large: testcase_generator.py 2454895 50 850 1000 50
+      - large: testcase_generator.py 2543344 20 900 1000 100
+      - large: testcase_generator.py 9295934 30 1000 500 1000
+      - large: testcase_generator.py 746935 10 1000 1000 100
+      - large: testcase_generator.py 23583890 50 1000 10000 1000

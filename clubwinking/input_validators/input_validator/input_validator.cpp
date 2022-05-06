@@ -6,22 +6,19 @@
 
 int main(int argc, char** argv) {
     InputValidator v(argc, argv);
-    int n = v.read_integer("n", 0, 100000);
-    v.space();
-    float f = v.read_float("f", 0, 100000);
+    int n = v.read_integer("n", 1, 50);
     v.newline();
+    int t = v.read_integer("t", 0, 1000);
+    v.newline();
+    for (int i = 0; i < t; i++) {
+        for (int j = 0; j < n; j++){
+            int coord = v.read_integer("coord", -1000000000, 1000000000);
+            v.space();
+        }
+        std::string color = v.read_string("color", 1, 10);
+        v.newline();
+    }
+
     return 0;
 
-    // Other useful commands:
-    // read_{float,integer}[s] takes an optional tag:
-    // Unique, Increasing, Decreasing, StrictlyIncreasing, StrictlyDecreasing
-    v.read_integers("v", /*count=*/10, 0, 1000000, Unique);
-    v.test_string("ACCEPTED"); // only succeeds when it reads the given string.
-    v.read_string("s", 4, 5);     // only succeeds when it reads a string with length in inclusive range.
-    bool b = v.peek('x'); // test the next character.
-    v.WA("The input is not valid."); // Print error and exit with code 43.
-    v.check(false, "WA on false");
-
-    // In its destructor, v automatically exits with code 42 here.
-    // TODO: Remove this comment, and summarize your input validator.
 }
