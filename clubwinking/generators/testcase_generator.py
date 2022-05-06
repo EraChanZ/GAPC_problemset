@@ -5,7 +5,7 @@ from math import gcd, ceil
 import random
 
 def random_vec(n):
-    return [random.randint(-20,20) for _ in range(n)]
+    return [random.randint(-100,100) for _ in range(n)]
 
 def normalize(vec):
     gcd_val = gcd(*vec)
@@ -23,17 +23,15 @@ rem_t = t
 
 k = random.randint(1, t) if n > 1 else 1
 
-colors = random.randint(1, t)
+colors = random.randint(1, 10)
 color_names = [randomstring() for _ in range(colors)]
 distrib = [0] + sorted(random.sample(range(1, t), k - 1)) + [t]
-print(distrib)
 for i in range(k):
     am_points = distrib[i + 1] - distrib[i]
     vec_line = normalize(random_vec(n))
-    print()
     for _ in range(am_points):
         ass_color = random.choice(color_names)
-        scalar = random.randint(-10, 10)
+        scalar = random.randint(-100, 100)
         print( *[el * scalar for el in vec_line], end=" ")
         print(ass_color)
 

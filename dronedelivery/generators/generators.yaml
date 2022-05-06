@@ -1,0 +1,60 @@
+solution: /submissions/accepted/solution.py
+#visualizer: /visualizers/asy.sh {name}
+# By default, generated files are not ignored.
+#gitignore_generated: false
+
+data:
+  sample:
+    type: directory
+    # Uncomment to disable generating ans files for sample cases.
+    solution: /submissions/accepted/solution.py
+    data:
+      # Some small examples showing to help understanding of the problem
+      #'1':
+      #'2':
+
+  secret:
+    type: directory
+    data:
+      # You can re-use the input validator by symlinking it as `generator` in
+      # this directory. Below is some inspiration for test cases.
+      #
+      # Use `-X` to set the value of variable `X`, as provided to the `read_*` functions.
+      # Use `min` and `max` to set variables to their minimum and maximum
+      # allowed values.
+      #- min: generator {seed} -n min -k min -ai min
+      #- max: generator {seed} -n max -k max -ai max
+      # Leave a variable out to pick a uniform random value.
+      #- random_a: generator {seed} -n max
+      # Provide an explicit list of values:
+      #- binary: generator {seed} -ai 0,1
+      # Provide probabilities for each value:
+      #- mostly_0: generator {seed} -ai 0:0.99,1:0.01
+      # Uniform random values in range:
+      #- small_a: generator {seed} -n 10 -ai 1..100
+      # Use a geometric distribution (see validation.h for more):
+      #- geometric: generator {seed} -n 100 -k 123 -ai geometric(0.1)
+
+      # Manual cases can be added like this:
+      #- handcrafted: manual/handcrafted.in
+      # They should be written to somewhere inside generators/ and will be
+      # copied into data/.
+      # You can also dump them in data/secret and run `bt generate --add-manual`
+      # followed by `bt generate --move-manual`.
+
+      # Typically, small test cases are more likely to find bugs/edge cases.
+      # When the limit on n is 1000, do something like:
+      - small: generator {seed:123} -n 10..10  -ai 0..10
+      - small: generator {seed:3423} -n 100..100 -ai 0..10
+      - small: generator {seed:733} -n 1000..1000  -ai 0..100
+      - small: generator {seed:3930} -n 1000..1000 -ai 0..1000
+      - medium: generator {seed:912} -n 10000..50000  -ai 0..10000 
+      - medium: generator {seed:122} -n 10000..50000 -ai 0..100000  
+      - medium: generator {seed:23632} -n 10000..50000 -ai 0..1000000  
+      - medium: generator {seed:583923} -n 10000..50000 -ai 0..1000000  
+      - medium: generator {seed:2347} -n 10000..50000 -ai 0..1000000  
+      - large: generator {seed:4311} -n 100000..200000  -ai 0..10000000 
+      - large: generator {seed:23992} -n 100000..200000  -ai 0..100000000 
+      - large: generator {seed:2911} -n 100000..200000 -ai 0..1000000000  
+      - large: generator {seed:1112} -n 100000..200000 -ai 0..1000000000
+      - large: generator {seed:1122} -n 100000..200000 -ai 0..1000000000  

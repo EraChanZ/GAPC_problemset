@@ -1,0 +1,23 @@
+\problemname{\problemyamlname}
+
+\illustration{0.3}{image.pdf}{}
+% Source: URL to image.
+
+% optionally define variables/limits for this problem
+\newcommand{\maxa}{123456789}
+
+As a project, students from the Eindhoven University of Technology have been working on a drone delivery system. The system consists of a drone and a ground delivery robot (GDR). Since taking off is quite costly, the drone will fly to a street where the GDR can then deliver packages to the doors nearby before they fly to the next street. Since time is of the essence, it is crucial that this takes the least amount of time possible. To solve this problem the TU/e students need your help. They need you to optimize the landing position of the drone to make sure that the GDR can deliver the packages in the shortest amount of time.
+Houses are situated equidistantly from each other. The robot takes exactly one time step to go to a neighbouring house and back, and it can carry only one package at a time.
+Given a street with such houses, find the optimal location for the drone to land.
+
+\begin{Input}
+    The input consists of:
+    \begin{itemize}
+        \item First line has an integer $n$ with $2 \leq n \leq 10^6$, indicating the number of houses.
+        \item Second line has $n$ integers $p_1, p_2, ..., p_n$ with $0 \leq p_i \leq 10^9$, indicating the number of packages to be delivered to each of the houses.
+    \end{itemize}
+\end{Input}
+
+\begin{Output}
+    An integer representing the landing location of the drone with the minimal delivery time. (If multiple answers are possible, print the one with smallest index)
+\end{Output}

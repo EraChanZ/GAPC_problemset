@@ -1,0 +1,21 @@
+\problemname{\problemyamlname}
+
+\illustration{0.3}{image.png}{}
+% Source: URL to image.
+
+% optionally define variables/limits for this problem
+\newcommand{\maxa}{123456789}
+
+Three friends, Arnold, Harmen and Andrea, decided to play a game. There is an initial pile of coins, and the players take turns to take from that pile a number of coins equal to the number of dots that are on a dice with 6 faces. If there are in the pile a number of coins smaller than the number of dots, the current player will take all of the coins. In every game, the players will take turns in the same order: Arnold, Harmen and then Andrea. The winner of the game is the person that can no longer take any coins.
+
+\begin{Input}
+    The input consists of:
+    \begin{itemize}
+        \item First line contains a number $k$ with $0 \leq k \leq 10^6$, that represents the number of played games.
+        \item Second line contains k space-separated numbers, which represent the initial number $X$ of coins with $0 \leq X \leq 10^{12}$ for each game.
+    \end{itemize}
+\end{Input}
+
+\begin{Output}
+    The name of the player that won the most number of games. If there are players with the same number of wins, print the name with minimal lexigraphical order.
+\end{Output}
